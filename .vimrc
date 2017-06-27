@@ -18,16 +18,12 @@ filetype plugin indent on
 
 set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:.
 set list
-colorscheme xterm16 
 set number
-" set smartindent
-set tabstop=2
-set shiftwidth=2
-set expandtab
-
 map <C-n> :NERDTreeToggle<CR>
 imap j <ESC>
 let g:tmux_navigator_no_mappings = 1
+
+autocmd FileType * set tabstop=2 | set shiftwidth=2 | set expandtab
 
 nnoremap <silent> {Left-Mapping} :TmuxNavigateLeft<cr>
 nnoremap <silent> {Down-Mapping} :TmuxNavigateDown<cr>
